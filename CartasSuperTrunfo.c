@@ -13,8 +13,9 @@ int main() {
     float pib1;
     int pontos_turisticos1;
 
-    printf("Olá, bem-vindo ao jogo Super Trunfo!\n");
+    printf("Olá, bem-vindo ao jogo Super Trunfo!\n\n");
     printf("Iremos pedir os dados das novas cartas que serão adicionadas ao seu deck.\n\n");
+    printf("Atente-se à unidade de medida (População: Milhões, Área: KM² e PIB: Bilhões).\nOu seja, digite todos os zeros.\n\n\n");
 
     printf("Digite o nome da cidade: ");
     scanf("%49s", cidade1);
@@ -28,6 +29,10 @@ int main() {
     printf("Digite o PIB da cidade: ");
     scanf("%f", &pib1);
 
+    float densidade1 = population1 / area1;
+    float pibpercapita1 = (pib1 / population1) * 1000;
+
+
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontos_turisticos1);
 
@@ -40,8 +45,9 @@ int main() {
     float area2;
     float pib2;
     int pontos_turisticos2;
+    
 
-    printf("Agora, iremos pedir os dados da segunda carta.\n\n");
+    printf("\nAgora, iremos pedir os dados da segunda carta.\n\n");
 
     printf("Digite o nome da cidade: ");
     scanf("%49s", cidade2);
@@ -54,6 +60,9 @@ int main() {
 
     printf("Digite o PIB da cidade: ");
     scanf("%f", &pib2);
+
+    float densidade2 = population2 / area2;
+    float pibpercapita2 = (pib2 / population2) * 1000;
 
     printf("Digite a quantidade de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
@@ -70,6 +79,9 @@ int main() {
     printf("PIB: %.2f\n", pib1);
     printf("Pontos Turísticos: %d\n", pontos_turisticos1);
     printf("Código da Carta: %s\n", codigo_carta1);
+    printf("Densidade demográfica: %.3f\n", densidade1);
+    printf("PIB per Capita: %.3f\n", pibpercapita1);
+
 
     printf("\nCarta 2:\n\n");
     printf("Cidade: %s\n", cidade2);
@@ -77,7 +89,14 @@ int main() {
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos Turísticos: %d\n", pontos_turisticos2);
-    printf("Código da Carta: %s\n", codigo_carta2);
+    printf("Código da Carta: %s\\n", codigo_carta2);
+    printf("Densidade demográfica: %.2f\n", densidade2);
+    printf("PIB per Capita: %.2f\n", pibpercapita2);
+
+
+
+    
+
 
     return 0;
 }
